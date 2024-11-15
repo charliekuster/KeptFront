@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upload</title>
     <link rel="stylesheet" href="/fixos/cssFixo.css">
-    <link rel="stylesheet" href="indexUpload.html">
+    <link rel="stylesheet" href="stylesGenomes.css">
 </head>
 <body>
     <header>
@@ -28,9 +28,32 @@
     </header>
 
     <main>
+        <div class="menu">
+            <div class="pag"><h2>Genomes</h2></div>
+            <script>
+                const buscaInput = document.getElementById("busca");
+                const lista = document.getElementById("lista");
+                const itens = lista.getElementsByTagName("li");
+
+                buscaInput.addEventListener("input", () => {
+                    const filtro = buscaInput.value.toLowerCase();
+                    for(let item of itens){
+                        const textoItem = item.textContent.toLowerCase();
+                    }
+                    if(textoItem.includes(filtro)){
+                        item.style.display = "";
+                    }
+                    else{
+                        item.style.display = "none"
+                    }
+                })
+            </script>
+            
+
+        </div>
 
 
-        <h1>GENOMES</h1>
+
 
 
     </main>
